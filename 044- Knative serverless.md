@@ -88,6 +88,15 @@
 
 ### Knative 的组件有哪些？
 
+![image-20210515102803415](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210515102803415.png)
+
+1. 不同用户有不同的使用方式。 
+
+
+
+1. serverless 到底说的是什么？在业界是有争论的。knative 认为自己是一个Paas平台，不仅仅可以做Faas。
+2. 
+
 ### 这些组件是如何一起工作的？
 
 ### Knative 适合哪些工作负载？
