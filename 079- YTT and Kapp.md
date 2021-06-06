@@ -32,4 +32,3 @@
 
 6. log 功能：基于 Deployment 的 log功能，Deployment 部署时不中断log
 7. -c: 显示 changed 信息
-
