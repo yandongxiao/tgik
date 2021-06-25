@@ -45,7 +45,7 @@ data:
 
 ## sub dns resolver
 
-![image-20210531144641720](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531144641720.png)
+![image-20210531144641720](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531144641720.png)
 
 1. 一个待验证的问题：tgik.k8s.work 相关的 metrics 信息是否会被收集？
 

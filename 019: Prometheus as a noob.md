@@ -34,7 +34,7 @@ parallel-ssh -i -O StrictHostKeyChecking=no $NODES \
 
 ## 架构图
 
-![image-20210503100322281](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210503100322281.png)
+![image-20210503100322281](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210503100322281.png)
 
 1. Prometheus Server 有三部分组成：Retrieval, Storage, PromQL。Retrieval 根据 Prometheus Config 从其它服务拉去指标；然后将它存储到时间序列数据库中；对外暴露PromQL，对指标进行运算。
 2. Retrieval 部分

@@ -21,13 +21,13 @@
 1. secret 中存储的是BASE64编码的 JWT Token
 2. 将 JWT Token 放到 JWT 官网上解析，可以获取到明文。
 
-![image-20210504161514350](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504161514350.png)
+![image-20210504161514350](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504161514350.png)
 
 ## OAUTH2_proxy （3.5k）
 
 A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.
 
-![image-20210504162102152](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504162102152.png)
+![image-20210504162102152](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504162102152.png)
 
 1. Nginx 的位置应该是 Ingress Controller
 2. oauth2_proxy 通过 authentication service provider，确定用户的身份
@@ -41,7 +41,7 @@ A reverse proxy and static file server that provides authentication using Provid
 
 ### 2. 在 OAUTH Provider 上面注册OAUTH应用。[Select a Provider and Register an OAuth Application with a Provider](https://oauth2-proxy.github.io/oauth2-proxy/docs/configuration/oauth_provider)
 
-![image-20210504163202289](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504163202289.png)
+![image-20210504163202289](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504163202289.png)
 
 Authentication Callback URL：这里填写的就是 OAUTH2_proxy 在Internet上暴露的域名。
 
@@ -192,11 +192,11 @@ spec:
 
 1. Joe 完成了认证这一步，页面会跳转到Dashboard的登录页面。
 2. 在Dashboard登录页面，你仍然需要提供对应的Token。
-3. proxy 在向 upstream 转发请求时，会带上一个X-Forward-Access-Token。用户可以添加一个WebHook，向 github.com 发送请求，验证Token的有效性。继而确认用户的身份。![image-20210504172422667](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504172422667.png)
+3. proxy 在向 upstream 转发请求时，会带上一个X-Forward-Access-Token。用户可以添加一个WebHook，向 github.com 发送请求，验证Token的有效性。继而确认用户的身份。![image-20210504172422667](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504172422667.png)
 
 4. Dashboard 和 proxy 的关系是一对多，所有想暴露的服务都可以通过proxy这一关的话，服务的安全性就比较高。这时服务和proxy之间就是多对一的关系。
 
 ## 问题
 
-![image-20210504165357206](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504165357206.png)
+![image-20210504165357206](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504165357206.png)
 

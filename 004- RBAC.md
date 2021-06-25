@@ -102,7 +102,7 @@ kubectl get csr user-request-jakub -o jsonpath='{.status.certificate}' | base64 
 
 ## RBAC 最佳实践
 
-![image-20210423155847323](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210423155847323.png)
+![image-20210423155847323](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210423155847323.png)
 
 1. default service account 没有什么权限。
 2. **The most secure option for RBAC is to have your application create a service account for itself with only the permissions it needs.**

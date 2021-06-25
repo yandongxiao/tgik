@@ -6,7 +6,7 @@
 
 ## Access Pattern
 
-![image-20210531174216622](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531174216622.png)
+![image-20210531174216622](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531174216622.png)
 
 ## 命令行参数
 
@@ -19,7 +19,7 @@
 
 以下是 API Server 的部分配置
 
-![image-20210531210053345](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531210053345.png)
+![image-20210531210053345](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531210053345.png)
 
 1. 该配置表明，只有一个ETCD Server，且该 Server 与 API Server在同一个宿主机上
 2. ETCD Server 通过 TLS 方式检查 API Server的身份，一旦成功，则允许API Server 的操作。ETCD Server 并没有权限校验相关的功能。
@@ -32,7 +32,7 @@
 
 ## auth to kubelet
 
-![image-20210531211230358](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531211230358.png)
+![image-20210531211230358](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531211230358.png)
 
 1. kubectl cp, exec, logs 命令：API Server 作为客户端，访问 kubelet。
 2. kubectl proxy 和 kubectl port-forward 可能不需要经过 kubelet，直接访问 pod 即可。
@@ -42,7 +42,7 @@
 
 ### 1. certs
 
-![image-20210531221846941](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531221846941.png)
+![image-20210531221846941](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531221846941.png)
 
 1. kubeadm 生成的 admin.conf 中的证书的有效期，默认是一年。以证书形式颁发的Cert，不能够 revoke。
 2. 通过对证书进行 base64 -d 解码，openssl x509 -text 解码，可以看到该证书对应的 client name 以及 group name。
@@ -54,7 +54,7 @@
 
 2. ` echo 'xxx' | jwt decode - ` 获取 token 的详情
 
-   ![image-20210531224233131](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531224233131.png)
+   ![image-20210531224233131](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531224233131.png)
 
 1. kid 相当于 token 的签名信息。
 2. 负责给token签名的 key，可以在 api server 的命令行参数中指定。

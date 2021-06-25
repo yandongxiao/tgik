@@ -16,11 +16,11 @@ The OAuth 2.0 authorization framework enables a third-party application to obtai
 3. resource server. The server hosting the protected resources, capable of accepting and responding to protected resource requests using access tokens
 4.  authorization server. 负责签发 Access Token。The server issuing access tokens to the client after successfully authenticating the resource owner and obtaining authorization.
 
-![image-20210516141706787](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210516141706787.png)
+![image-20210516141706787](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516141706787.png)
 
 站在用户的角度来看：
 
-![image-20210516020752547](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210516020752547.png)
+![image-20210516020752547](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516020752547.png)
 
 1. 用户打开Application的页面，点击注册；
 2. Application 返回一个重定向 redirect。用户随后请求 Authorization Server，请求颁发一个Token。
@@ -37,14 +37,14 @@ OpenID Connect (OIDC) is an identity layer built on top of the OAuth 2.0 framewo
 
 站在用户的角度来看：
 
-![image-20210516021859625](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210516021859625.png)
+![image-20210516021859625](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516021859625.png)
 
 1. 与 OAuth 2 相比，Access Token 的内容是 JWT + Refresh Token
 2. JWT会过期，Refresh Token用于获取新的 Token
 
 ## DEX的作用
 
-![image-20210516022211662](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210516022211662.png)
+![image-20210516022211662](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516022211662.png)
 
 1. 它被称为 OIDC middleware。
 2. 对于 gangway 来说，gangwaty 与 Dex 之间使用 OIDC 协议进行通信。Dex 负责签发 JWT 并管理 Token 的有效期。
@@ -62,9 +62,9 @@ Systems that can already consume OpenID Connect ID Tokens issued by dex include:
 
 所以，剩下的一个问题是，如何构造一个 kubeconfig 文件，里面包含了 JWT 的信息？这就是 gangway 要做的事情！！
 
-![image-20210516144916893](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210516144916893.png)
+![image-20210516144916893](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516144916893.png)
 
 ### gangway 根据 OIDC协议获取 Token 的过程
 
-![image-20210516144813434](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210516144813434.png)
+![image-20210516144813434](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516144813434.png)
 

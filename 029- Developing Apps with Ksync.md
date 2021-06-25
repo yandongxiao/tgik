@@ -23,4 +23,4 @@
    2. 应用依赖太多，应用太大，在本地部署不现实。
    3. 不应该依赖CI流程来验证开发的代码。
 
-![image-20210503234433321](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210503234433321.png)
+![image-20210503234433321](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210503234433321.png)

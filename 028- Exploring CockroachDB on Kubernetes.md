@@ -46,7 +46,7 @@
    1. 详细：方便Pod之间通信，一般搭配着Stateful Workload来使用.
    2. Annotation tolerate-unready-endpoints: 确保通过 DNS SRV方式，可以查看到所有的Pod。即使该Pod not ready.
 
-   ![image-20210504130136014](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504130136014.png)
+   ![image-20210504130136014](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504130136014.png)
 
 6. PodDisruptionBudget 规定了一次可以删除的Pod个数。
 7. StatefulSet

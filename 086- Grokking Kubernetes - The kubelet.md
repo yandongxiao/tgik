@@ -294,13 +294,13 @@ kubectl get --raw /api/v1/nodes/kubelet-worker/proxy/healthz
 
 3. 下面的截图说明：kubelet 通过 CRI 协议与 container runtime 进行交互，所以关于 container runtime 的配置中，有 --node-ip, --container-runtime 等参数。
 
-   ![image-20210530150042056](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210530150042056.png)
+   ![image-20210530150042056](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210530150042056.png)
 
 4. 你可以通过 crictl ，与 container runtime 进行交互。与 docker client 不同的是，它会包含一些 pod 相关的信息。
 
 5. 这是 kubeadm 使用的一个 annotation，表示该节点使用 containerd 作为 contaienr runtime。
 
-   ![image-20210530145216166](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210530145216166.png)
+   ![image-20210530145216166](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210530145216166.png)
 
 ## kubelet 与 container network
 

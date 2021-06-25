@@ -67,7 +67,7 @@ kubeadm init
 
 从 `kubeadm init`的输出结果可以kubeadm为我们做了哪些事情：1. 证书；2. static pod；3. 启动 addon
 
-![image-20210424133856156](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210424133856156.png)
+![image-20210424133856156](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210424133856156.png)
 
 1. [Node RBAC] : kubeadm 使用了两个 authorization 插件。
 2. Warning： token 的有效期问题，1.7 是永久的有效期，1.8的有效期是24小时
@@ -90,7 +90,7 @@ kubeadm token list
 kubeadm join --token=xxx api-server-address
 ```
 
-![image-20210424144524653](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210424144524653.png)
+![image-20210424144524653](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210424144524653.png)
 
 1. 使用 curl --insecure https://172.31.43.244:6443/api/v1/namespaces/kube-public/configmaps/cluster-info 获取集群的信息。
 2. 使用 token 信息，验证 cluster info 的正确性。确保 API Server 的合法性。

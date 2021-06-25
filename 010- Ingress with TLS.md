@@ -9,7 +9,7 @@
 
 ## 介绍Ingress的工作原理
 
-![image-20210426004949570](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210426004949570.png)
+![image-20210426004949570](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210426004949570.png)
 
 1. 用户输入 xxx.example.com 后，首先访问DNS服务，获取对应的IP地址。目前会使用GEO DNS，即根据用户的地理位置，找到一个合适IP地址。
 2. 该IP地址一般是一个LB地址。LB分为L3和L4两种。
@@ -28,7 +28,7 @@
    4. RBAC：所有namespace的get or list: configmap, nodes, pods, endpoints, secrets(跟TLS相关)，ingress（每个服务可以在自己的namespace下创建ingress，controller可以watch得到的）。
 2. Ingress的配置
 
-![image-20210426091254341](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210426091254341.png)
+![image-20210426091254341](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210426091254341.png)
 
 ## 问题
 
@@ -53,9 +53,9 @@
    2. 由于path更加匹配，所以该请求由kube-lego服务负责处理。
    3. 它将保存secret，并放置到用户的namespace下！
 
-![image-20210426232228854](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210426232228854.png)
+![image-20210426232228854](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210426232228854.png)
 
-![image-20210426232249501](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210426232249501.png)
+![image-20210426232249501](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210426232249501.png)
 
 1. 斯诺登泄露NSA将应用部署到了GCP
 2. 当时，谷歌采用了如上的通讯结构，内部以明文传输

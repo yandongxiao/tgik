@@ -11,7 +11,7 @@ Kris Nova is a software engineer, alpinist, author, and transgender advocate bes
 3. 作者选了三个自己觉得非常好的视频。
 4. Faces Of Open Source 是一本书，里面介绍了计算机世界里的牛人们。
 
-![image-20210505005605713](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210505005605713.png)
+![image-20210505005605713](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210505005605713.png)
 
 ## Kind 简介
 

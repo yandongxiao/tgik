@@ -12,11 +12,11 @@
 
 5. Resolved 服务的配置：/run/systemd/resolve/resolv.conf ，当 resolved 服务无法在缓存中找到 google.com 域名的IP地址时，它会向 /run/systemd/resolve/resolv.conf 中配置的 name server 发送域名 解析请求。
 
-   ![image-20210531102833206](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531102833206.png)
+   ![image-20210531102833206](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531102833206.png)
 
 5. `dig test.metal.k8s.work` 查看域名解析结果
 
-   ![image-20210531103425622](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531103425622.png)
+   ![image-20210531103425622](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531103425622.png)
 
    A 表示是 A 记录，是域名和IP地址列表的映射。265 表示域名解析结果的有效期为 265 秒。本地的 name server 使用它来标识何时过期。
 
@@ -38,11 +38,11 @@
 
 1. `kubectl run --it --rm bash bash`，查看它的`/etc/resolve.conf` 。
 
-   ![image-20210531113821733](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531113821733.png)
+   ![image-20210531113821733](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531113821733.png)
 
    对比 docker run 启动的容器
 
-   ![image-20210531113851874](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531113851874.png)
+   ![image-20210531113851874](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531113851874.png)
 
 2. `serach` 可以指定多个 search path，它的作用就是，你可以缩短域名为 svc，svc.namespace 等。比如 host kubernetes 时，完整的域名是： kubernetes.default.svc.cluster.local。注意：host 命令默认会使用 search path，dig 命令不会。
 3. ndots:5 表示 <service>.<ns>.svc.cluster.local。数字越大，域名解析的速度就会越慢。比如，host kubernetes 在进行域名解析时，最多会执行kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster, kubernetes.default.svc.cluster.local 五次域名解析操作，解析操作会在core-dns中完成。不会将请求转发到宿主机的 name server 上。详情参见：what are [ndots](https://pracucci.com/kubernetes-dns-resolution-ndots-options-and-why-it-may-affect-application-performances.html)
@@ -52,7 +52,7 @@
 
 ### /etc/nsswitch
 
-![image-20210531123300682](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531123300682.png)
+![image-20210531123300682](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531123300682.png)
 
 1. 如果使用 glibc 库，根据 /etc/nsswitch 的配置；
 2. 首先查看 /etc/hosts 文件
