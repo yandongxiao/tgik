@@ -41,4 +41,3 @@ spec:
 
 1. kubectx
 2. kubens
-

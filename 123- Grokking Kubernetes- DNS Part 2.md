@@ -1,10 +1,12 @@
+[TOC]
+
 # 123: Grokking Kubernetes: DNS Part 2
 
 ## 简介
 
 1.  22:00 开始介绍 core-dns
-2. **/etc/resolve.conf 中 多个 nameserver 的关系？**多个 nameserver 之间的关系是平等的。即，如果请求 nameserver-A 失败，则直接返回解析失败。不会再去请求 nameserver-B。 
-3.  service discovery things：dig svr any.any.svc.cluster.local 查看所有 service 的 DNS A 记录
+2. **/etc/resolve.conf 中多个 nameserver 的关系？**多个 nameserver 之间的关系是平等的。即，如果请求 nameserver-A 失败，则直接返回解析失败。不会再去请求 nameserver-B。 
+3.  dig svr any.any.svc.cluster.local 查看所有 service 的 DNS A 记录
 
 ## modifying it via configmap
 
@@ -45,7 +47,7 @@ data:
 
 ## sub dns resolver
 
-![image-20210531144641720](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210531144641720.png)
+![image-20210531144641720](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210531144641720.png)
 
 1. 一个待验证的问题：tgik.k8s.work 相关的 metrics 信息是否会被收集？
 
