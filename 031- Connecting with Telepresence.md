@@ -43,11 +43,11 @@ It mirrors things from the cluster back on your local machine。sshfs 的目的�
 
 ### 使用本地服务访问Kubernetes中的数据
 
-1. Joe 在本地启动kuard的前后端服务。This will start a debug node server on `localhost:8081`. It'll proxy all unhandled requests to `localhost:8080`。比如，DNS服务就是Node Server无法处理的请求![image-20210504220951371](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504220951371.png)
+1. Joe 在本地启动kuard的前后端服务。This will start a debug node server on `localhost:8081`. It'll proxy all unhandled requests to `localhost:8080`。比如，DNS服务就是Node Server无法处理的请求![image-20210504220951371](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504220951371.png)
 
 2. 使用telepresence命令重新启动Go服务。
 
    1. 前端服务还是可以访问后端服务。
    2. 后端服务的DNS功能可用，且显示Kubernetes相关信息。说明后端服务已经在Kubernetes当中了。
 
-   ![image-20210504221401716](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210504221401716.png)
+   ![image-20210504221401716](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210504221401716.png)

@@ -24,4 +24,4 @@ https://medium.com/flant-com/comparing-ingress-controllers-for-kubernetes-9b3974
 3. 貌似对traefik评价不高。Take a look at Traefik and HAProxy if there are increased demands for balancing and authorization methods.
 4. Contour has been around for a couple of years, but it still looks young and has mostly basic features built on top of Envoy.
 
-![image-20210517004817312](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210517004817312.png)
+![image-20210517004817312](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210517004817312.png)

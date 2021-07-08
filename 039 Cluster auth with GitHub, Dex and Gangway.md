@@ -164,8 +164,3 @@ connectors:
 ### user、gangway、OIDC 之间的交互过程
 
 ![image-20210516144813434](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210516144813434.png)
-
-
-
-
-

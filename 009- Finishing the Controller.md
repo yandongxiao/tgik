@@ -68,7 +68,7 @@
 
 1. user3 namespace 的 annotation 更新，触发了下面逻辑：
 
-![image-20210425231446718](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210425231446718.png)
+![image-20210425231446718](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210425231446718.png)
 
 2. default, user1, user2 namespace下，并没有发生Update事件的更新。
 3. User3 namespace 下面添加了ss secret，无法解释随后的Update事件。

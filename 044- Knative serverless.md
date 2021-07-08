@@ -5,7 +5,7 @@
 1. 13:30 开始介绍 knative。
 2. 找了一个观看次数最多的视频。knative由三部分组成：Build，Server，Eventing
 
-![image-20210511234256047](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210511234256047.png)
+![image-20210511234256047](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210511234256047.png)
 
 # Introducing Knative: Build, Deploy, and Manage Serverless Workloads on Kubernetes by David Currie
 
@@ -15,7 +15,7 @@
 
 ### Service
 
-![image-20210512010245425](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210512010245425.png)
+![image-20210512010245425](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512010245425.png)
 
 1. Helloworld-go 是一个简单的 GO HTTP HelloWorld
 2. autoscaling.knative.dev/target: "1"  默认并发超过100，就会新建一个Pod实例
@@ -23,23 +23,23 @@
 
 ### 灰度策略
 
-![image-20210512010926303](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210512010926303.png)
+![image-20210512010926303](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512010926303.png)
 
 ### **配置Event Source**
 
-![image-20210512011313770](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210512011313770.png)
+![image-20210512011313770](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512011313770.png)
 
 1. 配置 Event Source
 2. 将 Event Source 产生的 Event 转换成 HTTP 请求。
 
-![](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210512011504989.png)
+![](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512011504989.png)
 
 1. Trigger 负责从 Broker 获取请求，可以过滤请求。
 2. 并将它转发到 Service
 
 ### Knative 的组件有哪些？
 
-![image-20210515102803415](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210515102803415.png)
+![image-20210515102803415](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210515102803415.png)
 
 1. 不同用户有不同的使用方式。 
 

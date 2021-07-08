@@ -13,11 +13,11 @@
 
 1. 它能支持多少语言？支持到哪种程度？如下，采用的是 Go Plugin 生成 shared library 的方式来生成镜像。镜像比较小，20MB。
 
-![image-20210503181359750](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210503181359750.png)
+![image-20210503181359750](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210503181359750.png)
 
 2. 支持哪种类型的Trigger？比如，同步的HTTP，异步的NATS、Kafka等。
 
-![image-20210503181555077](/Users/yandongxiao/Library/Application Support/typora-user-images/image-20210503181555077.png)
+![image-20210503181555077](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210503181555077.png)
 
 3. 如何将本地的代码，如 helloworld.go，部署到Kubernetes上？
    1. 与现成的 Docker Registry 进行集成？还是直接构建镜像，部署？openfaas 和 nuclio 都是采用的第一种方式。
