@@ -1,8 +1,10 @@
+[TOC]
+
 # 006: kubeadm
 
-## Heptio 
+## Heptio
 
-它是 VMware下的一个组织，拥有自己的博客：https://blog.heptio.com/。它有两款开源产品：
+它是VMware下的一个组织，拥有自己的博客：https://blog.heptio.com/。它有两款开源产品：
 
 ### Velero（5.1k）
 
@@ -14,9 +16,7 @@
 1. Sonobuoy is a diagnostic tool that makes it easier to understand the state of a Kubernetes cluster by running a set of plugins (including [Kubernetes](https://github.com/kubernetes/kubernetes) conformance tests) in an accessible and non-destructive manner.
 2. 简单介绍：https://twitter.com/LachlanEvenson/status/893563156324208641
 
-
-
-### 创建虚拟机
+## 创建虚拟机
 
 1.  OS版本：Ubuntu Server 16.04
 
@@ -25,14 +25,13 @@
 3. Kubernetes 1.7 版本的 kubeadm 有如下缺陷：
 
    1. master 只支持单点部署
-   2. Kubernetes的升级是手动升级
+   2. Kubernetes 的升级是手动升级
    3. 以上两个问题正在着手解决
 
-   
 
-### 安装Docker
+## 安装 Docker
 
-使用 12.6 版本的Docker，最新版本的 13 与 Kubernetes 有冲突
+使用 12.6 版本的 Docker，最新版本的 13 与 Kubernetes 有冲突
 
 ```shell
 # Install docker
@@ -42,7 +41,7 @@ apt-get update
 apt-get install -y docker-engine=1.12.6-0~ubuntu-xenial
 ```
 
-### 安装 kubeadm & kubelet
+## 安装 kubeadm & kubelet
 
 以下内容来自 kubernetes 管控
 
@@ -95,8 +94,6 @@ kubeadm join --token=xxx api-server-address
 1. 使用 curl --insecure https://172.31.43.244:6443/api/v1/namespaces/kube-public/configmaps/cluster-info 获取集群的信息。
 2. 使用 token 信息，验证 cluster info 的正确性。确保 API Server 的合法性。
 3. 向API Server 发送请求，创建自己的证书。这时API Server 应该是通过token的方式来验证客户端的正确性。
-
-
 
 ### 通过本地访问搭建的K8S
 
