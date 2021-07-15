@@ -23,7 +23,7 @@ Pixie 是一个新的云原生应用程序的可观察性平台。有了它，�
 
 ## 数据面架构（Pixie Vizier）
 
-![image-20210606124735975](/Users/dxyan06/Library/Application Support/typora-user-images/image-20210606124735975.png)
+![image-20210606124735975](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210606124735975.png)
 
 1. Pixie Edge Module 以 DaemonSet 的方式部署在每个节点上。它搜集结点的数据，并存储到内存当中
 2. Collectors 负责将 Pixie Edge Module 的数据进行过滤并持久化。并能根据趋势，实现汇集数据。实现数据的快速查询。

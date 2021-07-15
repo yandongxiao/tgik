@@ -8,37 +8,37 @@
 
 ## 微服务带来的挑战-1
 
-![image-20210511235802924](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210511235802924.png?lastModify=1621385659)
+![image-20210511235802924](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210511235802924.png?lastModify=1621385659)
 
 ## 微服务带来的挑战-2
 
-![image-20210511235312157](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210511235312157.png?lastModify=1621385659)
+![image-20210511235312157](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210511235312157.png?lastModify=1621385659)
 
 ## 什么是 service mesh？
 
 它是一种理念，用户只需要关心业务逻辑。网络方面的非业务逻辑，交由 sidecar 来完成。例如：重试、metric信息、tracing 等
 
-![image-20210512000118619](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512000118619.png?lastModify=1621385659)
+![image-20210512000118619](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512000118619.png?lastModify=1621385659)
 
-![image-20210512000528573](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512000528573.png?lastModify=1621385659)
+![image-20210512000528573](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512000528573.png?lastModify=1621385659)
 
-![image-20210512000550159](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512000550159.png?lastModify=1621385659)
+![image-20210512000550159](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512000550159.png?lastModify=1621385659)
 
 ## Istio 架构
 
-![image-20210512001454495](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512001454495.png?lastModify=1621385659)
+![image-20210512001454495](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512001454495.png?lastModify=1621385659)
 
 1. 你无需修改Deployment和Service，可在半路上Istio 
 2. Istio 的配置和微服务的配置分离
 
-![image-20210512001815572](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512001815572.png?lastModify=1621385659)
+![image-20210512001815572](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512001815572.png?lastModify=1621385659)
 
 1. Virtual Service: How to route you traffic **TO** a given destination
 2. Destination Rule: Configure what happens to traffic FOR taht destination. 
 
 ## Istio 功能
 
-![image-20210512002136863](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512002136863.png?lastModify=1621385659)
+![image-20210512002136863](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512002136863.png?lastModify=1621385659)
 
 1. 不但可以通过CRD，配置路由规则
 2. 还可以作为service discovery、CA 存在
@@ -46,7 +46,7 @@
 
 ## 数据流转
 
-![image-20210512002806702](file:///Users/yandongxiao/Library/Application%20Support/typora-user-images/image-20210512002806702.png?lastModify=1621385659)
+![image-20210512002806702](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210512002806702.png?lastModify=1621385659)
 
 1. 可以代替Nginx Ingress Controller
 2. Service 只与同Pod上的 Envoy Proxy 通信

@@ -44,7 +44,7 @@ Jaeger Controller 通过 List and Watch 的方式监听，Jaeger CRD 对象。�
 
 ## 术语（trace and span）
 
-![image-20210606164510305](/Users/dxyan06/Library/Application Support/typora-user-images/image-20210606164510305.png)
+![image-20210606164510305](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210606164510305.png)
 
 ## 其它
 

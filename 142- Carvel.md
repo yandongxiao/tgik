@@ -102,7 +102,7 @@ spec:
 
 2. imgpkg 不仅仅是将 yaml 文件打包并上传。它还实现了 yaml 文件**依赖**容器镜像的功能。这样做的好处是，确保依赖的容器镜像不会被误删除。A bundle is an OCI image that holds 0+ arbitrary files *and* 0+ references to dependent OCI images (which *may* also be [bundles](https://carvel.dev/imgpkg/docs/latest/resources/#nested-bundle)). By tracking dependent images, imgpkg can copy bundles across registries。
 
-   ![image-20210606194552349](/Users/dxyan06/Library/Application Support/typora-user-images/image-20210606194552349.png)
+   ![image-20210606194552349](https://raw.githubusercontent.com/yandongxiao/typera/main/img/image-20210606194552349.png)
 
 ### 例子
 
